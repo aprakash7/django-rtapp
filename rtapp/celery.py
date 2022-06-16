@@ -4,7 +4,7 @@ from celery import Celery
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'rtapp.settings')
 
-app.Celery('rtapp')
+app = Celery('rtapp')
 
 app.config_from_object('django.conf:settings', namespace='CELERY')
 
